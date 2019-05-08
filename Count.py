@@ -5,8 +5,8 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-origin = cv2.imread('picture/ricetest.png')
-RiceImg = cv2.imread('picture/ricetest.png', 0)
+origin = cv2.imread('picture/ttt.png')
+RiceImg = cv2.imread('picture/ttt.png', 0)
 
 blur = cv2.GaussianBlur(RiceImg, (5, 5), 0)
 
@@ -21,11 +21,12 @@ num = len(contours[1])
 print num
 # 画轮廓
 cv2.drawContours(origin, contours[1], -1, (0, 0, 255), 1)
-cv2.putText(origin, 'Rice Num:  ' + str(num), (1, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (100, 100, 100), 2, cv2.LINE_AA)
+cv2.putText(origin, 'Insect Num:  ' + str(num), (1, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (50, 50, 50), 2, cv2.LINE_AA)
 
 cv2.namedWindow('RiceO', cv2.WINDOW_AUTOSIZE)
 cv2.imshow('RiceO', origin)
 
+cv2.imwrite('picture/tttresult.jpg',origin)
 k = cv2.waitKey(0)
 
 # 'ESC'
