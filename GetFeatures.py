@@ -6,8 +6,6 @@ import math
 import numpy as np
 
 
-
-
 def GetFiveFeatures(frame):
     # 判空
     if frame == None:

@@ -1,6 +1,6 @@
 # coding=utf-8
 # 先读图，然后二值化,
-# 似圆度
+# 球形度
 
 import cv2
 import math
